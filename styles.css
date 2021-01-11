@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background-color: #ff1d58;
+  background-image: url("https://media3.giphy.com/media/JoJ3qKVAoAklVoxBMC/200w.webp?cid=ecf05e47vpttb23fj1ikk4xnpxj69lwsu39ojqyz7d6fuooq&rid=200w.webp"),url("https://media3.giphy.com/media/JoJ3qKVAoAklVoxBMC/200w.webp?cid=ecf05e47vpttb23fj1ikk4xnpxj69lwsu39ojqyz7d6fuooq&rid=200w.webp");
+  background-repeat: repeat-y,repeat-y;
+  background-position:left 10px, right 10px;
+  background-size: 10%;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #00DDFF;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  padding: 3%;
+  margin: 2.2% auto;
+}
+
+.item {
+  border: 1px solid black;
+  margin: 2%;
+  border-radius: 5px;
+}
+
+.item1 {
+  background-color: blue;
+  grid-column: 1/3;
+  height: 120px;
+  color: yellow;
+  font-size: 2rem;
+}
+
+.item2, .item3, .item4, .item5 {
+  background-color: lightgrey;
+  height: 50px;
+  margin: 4%;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.item:not(.item1):hover {
+  background-color: darkgrey;
+  /* color: white; */
+}
+
+#demo1 {
+  transform: translateY(50%)
+}
+
+#demo2, #demo3, #demo4, #demo5 {
+  transform: translateY(50%);
+}
+
+/* classes through javaScript */
+.blink {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.sizing {
+  font-size: 3rem;
+  margin-top: 15%;
+}
+
+.option-style {
+  animation-name: stylingoption;
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes stylingoption {
+  from {
+    background-color: green;
+  }
+
+  to {
+    background-color: white;
+  }
+}
+
+.option-wrong-style {
+  animation-name: stylingoption1;
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes stylingoption1 {
+  from {
+    background-color: red;
+  }
+
+  to {
+    background-color: white;
+  }
+}
+
+/* media queries */
+@media (max-width:799px) {
+  .container {
+    width: 90%;
+  }
+
+  .item {
+    margin: 2%;
+  }
+
+  .item1 {
+    font-size: 1.7rem;
+  }
+
+  .item2, .item3, .item4, .item5 {
+    font-size: 1.3rem;
+  }
+
+  .sizing {
+    font-size: 2rem;
+  }
+}
