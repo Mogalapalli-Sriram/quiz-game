@@ -43,7 +43,7 @@ keypressAfter(); /* function call to display the container containing question o
 
 
 // keypress event for the game to start
-document.addEventListener(" keypress touchmove", function() {
+document.addEventListener(" touchmove", function() {
   if (!start) {
     headUpdate();
     quizSequence();
@@ -86,7 +86,7 @@ function quizSequence() {
 // code for the click event ( i.e to click on my answer to question)
 var length1 = document.querySelectorAll(".optionclick").length;
 for (var i = 0; i < length1; i++) {
-  document.querySelectorAll(".optionclick")[i].addEventListener("click touchstart", function() {
+  document.querySelectorAll(".optionclick")[i].addEventListener("touchstart", function() {
   var clickContent = this.innerText;
 // condition for correct answer of each randomly generated questions
   if ((clickContent === ques1.option2) || (clickContent === ques2.option1) || (clickContent === ques3.option1) || (clickContent === ques4.option2) || (clickContent === ques5.option4) || (clickContent === ques6.option1) || (clickContent === ques7.option2) || (clickContent === ques8.option2) || (clickContent === ques9.option4) || (clickContent === ques10.option1) || (clickContent === ques11.option2) || (clickContent === ques12.option4) || (clickContent === ques13.option4) || (clickContent === ques14.option1) || (clickContent === ques15.option2) || (clickContent === ques16.option4) || (clickContent === ques17.option2) || (clickContent === ques18.option2) || (clickContent === ques19.option4) || (clickContent === ques20.option1)) {
@@ -167,7 +167,7 @@ function endQuiz() {
 function keypressAfter() {
   document.querySelector("h1").classList.add("sizing");
   document.querySelector(".container").classList.add("hidden");
-  document.addEventListener("click touchmove", function() {
+  document.addEventListener("touchmove", function() {
   document.querySelector(".container").classList.remove("hidden");
   document.querySelector("h1").classList.remove("sizing");
   });
